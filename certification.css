@@ -1,0 +1,168 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2193b0, #6dd5ed);  /* Elegant gradient */
+    color: #fff;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 20px;
+}
+
+/* Container for certificates */
+#certificates-section {
+    max-width: 1200px;
+    width: 100%;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Certificate item styling */
+.certificate-item {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px 0;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 300px;
+}
+
+.certificate-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Certificate Title */
+.certificate-item h3 {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Date and Organization */
+.certificate-item p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* View Certificate Button */
+.certificate-item .certificate-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ff8c00, #ff6f00);
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    align-self: center;
+    margin-top: auto;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.certificate-item .certificate-link:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #ff6f00, #ff8c00);
+}
+
+/* Hover Effects */
+.certificate-item:hover .certificate-link {
+    background: linear-gradient(135deg, #3498db, #2d8fc5);
+    transform: translateY(-10px);
+}
+
+/* Responsiveness */
+@media (min-width: 768px) {
+    .certificate-item {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 30px;
+        height: auto;
+    }
+
+    .certificate-item p {
+        margin-right: 20px;
+        flex-grow: 1;
+    }
+}
+
+/* Lightbox Overlay */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.lightbox-overlay img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.lightbox-overlay img:hover {
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for certificate items */
+.certificate-item {
+    animation: slideIn 0.6s ease-out;
+}
+
+.certificate-item:nth-child(even) {
+    animation-delay: 0.3s;
+}
+
+.certificate-item:nth-child(odd) {
+    animation-delay: 0.6s;
+}

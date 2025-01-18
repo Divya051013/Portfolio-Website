@@ -1,0 +1,166 @@
+/* skiils anfd project page   */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f0f4f7; /* Soft light gray background for all pages */
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for content */
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #2d3e50;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Section Styling */
+.project, .skills-category {
+    background: #ffffff; /* White background for sections */
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover, .skills-category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Section */
+.project h2 {
+    font-size: 28px;
+    color: #1d6db5;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.project p {
+    color: #636f7b;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.project a {
+    padding: 12px 25px;
+    background-color: #1d6db5;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.project a:hover {
+    background-color: #155f8a;
+    transform: translateY(-5px);
+}
+
+/* Skills Section */
+.skills-category h2 {
+    font-size: 26px;
+    color: #2d3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.skills-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-category ul li {
+    font-size: 18px;
+    color: #636f7b;
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.skills-category ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #1d6db5;
+    font-size: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.skills-category ul li:hover {
+    color: #1d6db5;
+    font-weight: bold;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+/* Gradient Backgrounds for Project & Skills */
+.project-page .project {
+    background: linear-gradient(135deg, rgba(29, 109, 181, 0.1), rgba(29, 109, 181, 0.3)); /* Light gradient for Project */
+}
+
+.skills-page .skills-category {
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.2), rgba(46, 204, 113, 0.4)); /* Light gradient for Skills */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #2d3e50;
+    color: white;
+    font-size: 14px;
+    margin-top: 50px;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .project h2, .skills-category h2 {
+        font-size: 24px;
+    }
+
+    .project p, .skills-category ul li {
+        font-size: 16px;
+    }
+
+    .project a {
+        font-size: 14px;
+    }
+}
+
+
+    
+
+
+ 
